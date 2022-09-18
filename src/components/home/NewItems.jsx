@@ -64,8 +64,7 @@ const NewItems = () => {
   return (
     <section id="section-items" className="no-bottom">
       <div className="container">
-
-        <div className="row">
+        <div className="row" data-aos="fade-up" data-aos-delay="500">
           <div className="col-lg-12">
             <div className="text-center">
               <h2>New Items</h2>
@@ -87,7 +86,7 @@ const NewItems = () => {
                           />
                         </Link>
                         <i className="fa fa-check"></i>
-                        </div>
+                      </div>
                       <Link to="">
                         <Skeleton width="100%" height="340px" />
                       </Link>
@@ -102,7 +101,7 @@ const NewItems = () => {
                         <Skeleton width="40px" height="20px" />
                       </div>
                     </div>
-                    </div>
+                  </div>
                 ))}
               </div>
               <>
@@ -133,7 +132,7 @@ const NewItems = () => {
                         ""
                       )}
 
-<div className="nft__item_wrap">
+                      <div className="nft__item_wrap">
                         <div className="nft__item_extra">
                           <div className="nft__item_buttons">
                             <button>Buy Now</button>
@@ -180,17 +179,18 @@ const NewItems = () => {
                       </div>
                     </div>
                   </div>
-                      ))}
-                      </div>
-                      <>
-                        <Arrow left onClick={() => instanceRef.current?.prev()} />
-                        <Arrow onClick={() => instanceRef.current?.next()} />
-                      </>
-                    </div>
-                  )}
-                </div>
+                ))}
               </div>
-            </section>
-              );
-            };
-            export default NewItems;
+              <>
+                <Arrow left onClick={() => instanceRef.current?.prev()} />
+                <Arrow onClick={() => instanceRef.current?.next()} />
+              </>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default NewItems;

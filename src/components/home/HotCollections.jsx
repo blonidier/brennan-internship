@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
-import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
-import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import Skeleton from "../UI/Skeleton";
 
 const HotCollections = () => {
@@ -17,8 +17,8 @@ const HotCollections = () => {
         onClick={props.onClick}
         className={`arrow ${props.left ? "arrow-left" : "arrow-right"}`}
       >
-        {props.left && <KeyboardArrowLeftRoundedIcon />}
-        {!props.left && <KeyboardArrowRightRoundedIcon />}
+        {props.left && <KeyboardArrowLeftIcon />}
+        {!props.left && <KeyboardArrowRightIcon />}
       </svg>
     );
   }
